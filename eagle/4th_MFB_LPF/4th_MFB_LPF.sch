@@ -6249,6 +6249,7 @@ DIN A4, landscape with location and doc. field</description>
 <sheets>
 <sheet>
 <plain>
+<text x="109.22" y="45.72" size="1.778" layer="91">4Pin(V-)と8Pin(V+)の位置が普通と逆なので注意</text>
 </plain>
 <instances>
 <instance part="IC1" gate="A" x="109.22" y="78.74" rot="MR180"/>
@@ -6263,13 +6264,13 @@ DIN A4, landscape with location and doc. field</description>
 <instance part="JP1" gate="A" x="55.88" y="127" rot="MR0"/>
 <instance part="JP2" gate="G$1" x="55.88" y="78.74" rot="MR0"/>
 <instance part="JP3" gate="A" x="210.82" y="76.2"/>
-<instance part="P+1" gate="1" x="109.22" y="93.98"/>
-<instance part="P-1" gate="1" x="109.22" y="63.5"/>
+<instance part="P+1" gate="1" x="109.22" y="63.5" rot="MR180"/>
+<instance part="P-1" gate="1" x="109.22" y="93.98" rot="MR180"/>
 <instance part="C1" gate="G$1" x="81.28" y="73.66"/>
 <instance part="C2" gate="G$1" x="96.52" y="91.44"/>
 <instance part="C3" gate="G$1" x="147.32" y="73.66"/>
 <instance part="C4" gate="G$1" x="162.56" y="91.44"/>
-<instance part="P+2" gate="1" x="68.58" y="137.16"/>
+<instance part="P+2" gate="1" x="71.12" y="137.16"/>
 <instance part="P-2" gate="1" x="71.12" y="116.84"/>
 <instance part="GND1" gate="1" x="76.2" y="121.92"/>
 <instance part="GND2" gate="1" x="66.04" y="58.42"/>
@@ -6289,36 +6290,36 @@ DIN A4, landscape with location and doc. field</description>
 <nets>
 <net name="V-" class="0">
 <segment>
-<pinref part="IC1" gate="P" pin="V+"/>
-<pinref part="P-1" gate="1" pin="V-"/>
-<wire x1="109.22" y1="71.12" x2="109.22" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="C6" gate="G$1" pin="1"/>
-<wire x1="109.22" y1="68.58" x2="109.22" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="68.58" x2="109.22" y2="68.58" width="0.1524" layer="91"/>
-<junction x="109.22" y="68.58"/>
-</segment>
-<segment>
-<pinref part="JP1" gate="A" pin="2"/>
-<pinref part="P-2" gate="1" pin="V-"/>
-<wire x1="58.42" y1="127" x2="71.12" y2="127" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="127" x2="71.12" y2="119.38" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="V+" class="0">
-<segment>
 <pinref part="IC1" gate="P" pin="V-"/>
-<pinref part="P+1" gate="1" pin="V+"/>
 <wire x1="109.22" y1="86.36" x2="109.22" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="C5" gate="G$1" pin="1"/>
-<wire x1="109.22" y1="88.9" x2="109.22" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="88.9" x2="109.22" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="P-1" gate="1" pin="V-"/>
+<wire x1="109.22" y1="91.44" x2="109.22" y2="88.9" width="0.1524" layer="91"/>
 <junction x="109.22" y="88.9"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="A" pin="3"/>
-<wire x1="58.42" y1="124.46" x2="68.58" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="124.46" x2="71.12" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="P-2" gate="1" pin="V-"/>
+<wire x1="71.12" y1="124.46" x2="71.12" y2="119.38" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="V+" class="0">
+<segment>
+<pinref part="IC1" gate="P" pin="V+"/>
+<wire x1="109.22" y1="71.12" x2="109.22" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="C6" gate="G$1" pin="1"/>
+<wire x1="111.76" y1="68.58" x2="109.22" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="P+1" gate="1" pin="V+"/>
+<wire x1="109.22" y1="68.58" x2="109.22" y2="66.04" width="0.1524" layer="91"/>
+<junction x="109.22" y="68.58"/>
+</segment>
+<segment>
+<pinref part="JP1" gate="A" pin="2"/>
+<wire x1="58.42" y1="127" x2="71.12" y2="127" width="0.1524" layer="91"/>
 <pinref part="P+2" gate="1" pin="V+"/>
-<wire x1="68.58" y1="124.46" x2="68.58" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="127" x2="71.12" y2="134.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
